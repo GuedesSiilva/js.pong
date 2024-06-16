@@ -31,7 +31,7 @@ function draw() {
   movimentaRival();
   colisaoRaqueteRival();
   Placar();
-  
+  bolinhaNaoFicaPresa();
 }
 
 function bola() {
@@ -103,4 +103,10 @@ function Placar(){
     pontosRival += 1;
     ponto.play()
   }
+}
+
+function bolinhaNaoFicaPresa(){
+    if (xBola - raio < 0){
+    xBola = 23
+    }
 }
